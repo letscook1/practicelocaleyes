@@ -201,18 +201,33 @@ nav#main-nav {
   color: set-text-color($dark-color);
 }
 
-.button {
+#login_button {
   padding: 10px 15px;
+  background: color(primary-dark);
+  color: color(accent);
+  transition-property: background, border-radius;
+  transition-duration: 1s;
 }
 
-.button-a {
-  @extend .button;
-  background: darken($primary-color, 10%);
-  color: set-text-color($primary-color);
+#login_button:hover {
+  border-radius: 25%;
 }
 
-.button-b {
-  @extend .button;
-  background: lighten($secondary-color, 10%);
-  color: set-text-color($secondary-color);
+@-webkit-keyframes mymove {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 200px;
+  }
+}
+
+/* Standard syntax */
+@keyframes mymove {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 200px;
+  }
 }
