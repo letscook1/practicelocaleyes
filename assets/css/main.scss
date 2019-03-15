@@ -11,4 +11,208 @@ body {
   background-color: color(accent);
   text-align: center;
   color: color(primary);
+  font-family: "Montserrat";
+  margin: 0;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  #bg {
+    clip-path: polygon(100% 0, 99% 80%, 40% 100%, 0 100%, 0 0);
+    /*background-color: map-get($colors, primary);*/
+    background-color: color(primary);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+
+    @include desktop {
+      clip-path: polygon(0 0, 76% 0, 48% 100%, 0% 100%);
+    }
+  }
+
+  header a {
+    color: #fff;
+    text-decoration: none;
+    padding: $padding;
+    display: block;
+    text-transform: uppercase;
+  }
+}
+
+main {
+  section#card {
+    background: #ffffff;
+    padding: 20px;
+    margin: 1em auto;
+    border-radius: $borders;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 80%;
+
+    @include desktop {
+      grid-area: card;
+      height: fit-content;
+      align-self: center;
+      margin: 1em;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin-bottom: 10px;
+
+        span {
+          position: absolute;
+          width: 30px;
+          height: 30px;
+          background-color: color(primary-light);
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+
+        strong {
+          display: inlines-block;
+          margin-left: max(40px);
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+  section#primary {
+    color: #fff;
+    padding: $padding;
+    text-align: center;
+
+    @include desktop {
+      grid-area: primary;
+      text-align: left;
+      margin: 4em 0 0 4em;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-top: 10px;
+      text-transform: uppercase;
+
+      @include desktop {
+        width: 30%;
+        font-size: 4em;
+        line-height: 0.9em;
+      }
+    }
+
+    p {
+      font-size: 1.4em;
+    }
+
+    a {
+      color: color(primary-dark);
+      border-radius: $borders;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: bold;
+      background-color: color(accent);
+      display: block;
+      text-align: center;
+      margin: 50px auto 0 auto;
+      padding: $padding;
+
+      @include desktop {
+        display: inline-block;
+        padding: $padding $padding * 4;
+      }
+    }
+  }
+}
+
+body {
+  background: $body-bg;
+  font-family: $main-font;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.container {
+  max-width: $container;
+  margin: auto;
+  padding: 0 20px;
+}
+
+header#main-header {
+  padding: 1em;
+  background: $primary-color;
+  color: set-text-color($primary-color);
+
+  h1 {
+    font-size: 40px;
+  }
+}
+
+nav#main-nav {
+  background: $secondary-color;
+  height: 40px;
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    display: inline;
+  }
+
+  a {
+    color: #fff;
+    padding-right: 20px;
+    &:hover {
+      color: #ccc;
+    }
+  }
+}
+
+.section {
+  padding: $section-padding;
+
+  h1 {
+    margin-bottom: 30px;
+  }
+}
+
+//extending
+#section-a {
+  @extend .section;
+  background: $light-color;
+  color: set-text-color($light-color);
+}
+#section-b {
+  @extend .section;
+  background: $dark-color;
+  color: set-text-color($dark-color);
+}
+
+.button {
+  padding: 10px 15px;
+}
+
+.button-a {
+  @extend .button;
+  background: darken($primary-color, 10%);
+  color: set-text-color($primary-color);
+}
+
+.button-b {
+  @extend .button;
+  background: lighten($secondary-color, 10%);
+  color: set-text-color($secondary-color);
 }

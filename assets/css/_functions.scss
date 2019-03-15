@@ -1,3 +1,21 @@
 @function color($color-name) {
   @return map-get($colors, $color-name);
 }
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
