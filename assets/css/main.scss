@@ -154,18 +154,6 @@ a {
   }
 }
 
-//extending
-#section-a {
-  @extend .section;
-  background: $light-color;
-  color: set-text-color($light-color);
-}
-#section-b {
-  @extend .section;
-  background: $dark-color;
-  color: set-text-color($dark-color);
-}
-
 #login_button {
   padding: 10px 15px;
   background: color(primary-light);
