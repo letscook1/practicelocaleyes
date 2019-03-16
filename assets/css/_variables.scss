@@ -1,9 +1,8 @@
 $colors: (
   primary: #ff0000,
-  primary-light: lighten(#ff0000, 40%),
   primary-dark: darken(#ff0000, 40%),
   secondary: #000000,
-  accent: #f0ead6
+  secondary-light: lighten(#000000, 40%) ; accent: #f0ead6
 );
 
 $padding: 15px;

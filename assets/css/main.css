@@ -174,7 +174,7 @@ a {
 
 #login_button {
   padding: 10px 15px;
-  background: #ffcccc;
+  background: #000000;
   color: #f0ead6;
   -webkit-transition-property: background, border-radius;
   transition-property: background, border-radius;
